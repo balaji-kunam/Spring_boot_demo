@@ -2,6 +2,11 @@ pipeline {
 agent any
 
 
+tools {
+    jdk 'jdk17'
+    maven 'maven3'
+}
+
 environment {
     IMAGE_NAME = "balajikunamgari/springboot-demo:${BUILD_NUMBER}"
 }
@@ -10,6 +15,8 @@ stages {
 
     stage('Build') {
         steps {
+            sh 'java -version'
+            sh 'mvn -version'
             sh 'mvn clean package'
         }
     }
