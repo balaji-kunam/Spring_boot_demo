@@ -16,6 +16,11 @@ stages {
     stage('Build') {
         steps {
             sh 'java -version'
+            sh 'echo JAVA_HOME=$JAVA_HOME'
+            sh 'which java || true'
+            sh 'which javac || true'
+            sh 'java -version'
+            sh 'javac -version'
             sh 'mvn -version'
             sh 'mvn clean package'
         }
