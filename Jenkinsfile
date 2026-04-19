@@ -1,7 +1,7 @@
 pipeline {
 agent any
 
-```
+
 environment {
     IMAGE_NAME = "balajikunamgari/springboot-demo:${BUILD_NUMBER}"
 }
@@ -38,6 +38,6 @@ stages {
         }
     }
 }
-```
+
 
 }
